@@ -4,6 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
+@section Sidebar {
+
+        @Html.ActionLink("Detalle","Details","Receta",Model.Id)
+        @Html.ActionLink("Eliminar","Delete","Receta",Model.Id)
+        @Html.ActionLink("Editar", "Edit", "Receta", Model.Id)
+}
 
 <h2>Ver Detalle de Receta</h2>
 @Html.ActionLink("Volver a index","Index","Receta")
