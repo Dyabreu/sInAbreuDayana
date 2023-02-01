@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Mis Recetas</h1>
+    </header>
+
+    <aside>
+        @if (IsSectionDefined("SideBar"))
+        {
+            @RenderSection("SideBar")
+        }
+    </aside>
+
+    <nav>
+        @Html.ActionLink("Inicio", "Index", "Home")
+        @Html.ActionLink("Recetas", "Index", "Receta")
+
+    </nav>
+
+    <main>
+    <div>
+            @RenderBody()
+    </div>
+    </main>
+
+    <footer>
+        <h3>roisrecetas@web.com</h3>
+    </footer>
+</body>
+</html>
