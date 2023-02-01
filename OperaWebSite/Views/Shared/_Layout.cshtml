@@ -8,15 +8,9 @@
 </head>
 <body>
     <header>
+        <div class="titulo">
         <h1>Mis Recetas</h1>
-    </header>
-
-    <aside>
-        @if (IsSectionDefined("SideBar"))
-        {
-            @RenderSection("SideBar")
-        }
-    </aside>
+        </div>
 
     <nav>
         @Html.ActionLink("Inicio", "Index", "Home")
@@ -24,10 +18,18 @@
 
     </nav>
 
+    </header>
+
     <main>
-    <div>
+    <div class="contenido">
             @RenderBody()
     </div>
+      <aside>
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+    </aside>
     </main>
 
     <footer>

@@ -6,7 +6,11 @@
 }
 
 
-@Html.ActionLink("Nuevo","Insertar","Receta")
+@section Sidebar {
+        <div class="boton">
+        @Html.ActionLink("Nueva Receta","Create","Receta")
+        </div>
+}
    <table>
         <tr>
             <th>@Html.DisplayNameFor(model=>model.Nombre)</th>
@@ -47,11 +51,6 @@
                             <td>
                 @Html.DisplayFor(modelItem=>item.Email)
                             </td> 
-                            <td>
-                @Html.ActionLink("Detalle","Details","Receta",new{id=item.Id })
-                @Html.ActionLink("Eliminar","Delete","Receta",new{id=item.Id })
-                @Html.ActionLink("Editar", "Edit", "Receta", new{id=item.Id })
-                    </td>
                    </tr>
     }
     </table>
